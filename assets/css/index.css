@@ -70,6 +70,10 @@ ul {
   list-style-type: none;
 }
 
+#user-dropdown {
+  background-color: #0b0b0b;
+}
+
 #play-bar {
   height: 139px;
 }
