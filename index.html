@@ -27,7 +27,7 @@
       <div class="container-fluid">
         <div class="row" id="left-side">
           <div class="col-3" id="left-bar">
-            <div class="row fs-6 border-bottom gy-1" id="hero-left-side">
+            <div class="row fs-6 border-bottom gy-1 px-2" id="hero-left-side">
               <div class="col-6">
                 <div class="dropdown">
                   <button
@@ -36,7 +36,7 @@
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    <i class="bi bi-three-dots"></i>
+                    <i class="bi bi-three-dots fs-4"></i>
                   </button>
                   <ul class="dropdown-menu dropdown-menu-dark">
                     <li><a class="dropdown-item" href="#">File</a></li>
@@ -57,32 +57,41 @@
               </div>
 
               <div class="col-10">
-                <ul class="p-0">
-                  <li><i class="bi bi-house-door-fill"></i> Home</li>
-                  <li><i class="bi bi-search"></i> Cerca</li>
-                  <li><i class="bi bi-music-note-list"></i> La tua libreria</li>
+                <ul class="p-0 mb-5">
+                  <li class="mb-3 fw-bold fs-7">
+                    <i class="bi bi-house-door-fill fs-icons"></i>
+                    <span class="ms-2">Home</span>
+                  </li>
+                  <li class="mb-3 fw-bold fs-7">
+                    <i class="bi bi-search fs-icons"></i>
+                    <span class="ms-2">Cerca</span>
+                  </li>
+                  <li class="mb-3 fw-bold fs-7">
+                    <i class="bi bi-music-note-list fs-icons"></i>
+                    <span class="ms-2">La tua libreria</span>
+                  </li>
                 </ul>
               </div>
 
               <div class="col-10">
                 <ul class="p-0">
-                  <li>
+                  <li class="mb-3 fw-bold fs-7">
                     <div class="d-inline-block">
                       <i
-                        class="bi bi-plus-lg bg-plus rounded-1 p-icons fs-7 text-dark fw-bold"
+                        class="bi bi-plus-lg bg-plus rounded-1 p-icons fs-7 text-dark"
                       ></i>
                     </div>
                     <span class="ms-2">Crea playlist</span>
                   </li>
-                  <li>
+                  <li class="mb-3 fw-bold fs-7">
                     <div class="d-inline-block">
                       <i
                         class="bi bi-suit-heart-fill rounded-1 p-icons fs-7 bg-heart"
                       ></i>
                     </div>
-                    <span class="ms-2"></span>Brani che ti piacciono</span>
+                    <span class="ms-2">Brani che ti piacciono</span>
                   </li>
-                  <li>
+                  <li class="mb-3 fw-bold fs-7">
                     <div class="d-inline-block">
                       <i
                         class="bi bi-bookmark-fill text-success fs-7 bg-darkgreen rounded-1 p-icons"
@@ -94,9 +103,9 @@
                 </ul>
               </div>
             </div>
-            <div class="row" id="playlist-list">
+            <div class="row px-2" id="playlist-list">
               <div class="col-12 gap-2">
-                <ul class="p-0">
+                <ul class="p-0 mt-3">
                   <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
                   <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
                   <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>

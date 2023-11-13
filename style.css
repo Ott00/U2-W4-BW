@@ -1,3 +1,6 @@
+/* body {
+  overflow: hidden;
+} */
 #left-bar {
   background-color: black;
 }
@@ -6,7 +9,7 @@ ul {
 }
 
 #playlist-list {
-  max-height: calc(100vh - 215px);
+  max-height: calc(100vh - 309px);
   overflow-y: auto;
 }
 
@@ -19,12 +22,17 @@ ul {
   text-overflow: ellipsis;
 }
 
+/* #playlist-list > div > ul {
+  margin-top: 0.7rem;
+} */
+
 .fs-7 {
   font-size: 14px;
 }
 
 #hero-left-side ul li {
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
+  max-height: 20px;
 }
 
 .bg-plus {
@@ -44,4 +52,7 @@ ul {
 
 .p-icons {
   padding: 0.3rem;
+}
+.fs-icons {
+  font-size: 1.45rem;
 }
