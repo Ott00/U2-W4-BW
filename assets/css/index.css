@@ -2,6 +2,10 @@
   font-size: 0.8rem;
 }
 
+#friend-tab p:last-child {
+  font-size: 0.6rem;
+}
+
 #friend-tab span {
   font-size: 0.6rem;
 }
