@@ -21,8 +21,123 @@
       <!-- FRIEND TAB  -->
       <div class="text-bg-dark">
         <div class="row">
-          <div class="col-3"></div>
-          <div class="col-7"></div>
+          <div class="col-3" id="left-bar">
+            <div class="row fs-6 border-bottom gy-1 px-2" id="hero-left-side">
+              <div class="col-6">
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary bg-transparent border-0 ps-0"
+                    type="menu"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="bi bi-three-dots fs-4"></i>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">File</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Modifica</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Visualizza</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Riproduzione</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Assistenza</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-10">
+                <ul class="p-0 mb-5">
+                  <li class="mb-3 fw-bold fs-7">
+                    <i class="bi bi-house-door-fill fs-icons"></i>
+                    <span class="ms-2">Home</span>
+                  </li>
+                  <li class="mb-3 fw-bold fs-7">
+                    <i class="bi bi-search fs-icons"></i>
+                    <span class="ms-2">Cerca</span>
+                  </li>
+                  <li class="mb-3 fw-bold fs-7">
+                    <i class="bi bi-music-note-list fs-icons"></i>
+                    <span class="ms-2">La tua libreria</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-10">
+                <ul class="p-0">
+                  <li class="mb-3 fw-bold fs-7">
+                    <div class="d-inline-block">
+                      <i
+                        class="bi bi-plus-lg bg-plus rounded-1 p-icons fs-7 text-dark"
+                      ></i>
+                    </div>
+                    <span class="ms-2">Crea playlist</span>
+                  </li>
+                  <li class="mb-3 fw-bold fs-7">
+                    <div class="d-inline-block">
+                      <i
+                        class="bi bi-suit-heart-fill rounded-1 p-icons fs-7 bg-heart"
+                      ></i>
+                    </div>
+                    <span class="ms-2">Brani che ti piacciono</span>
+                  </li>
+                  <li class="mb-3 fw-bold fs-7">
+                    <div class="d-inline-block">
+                      <i
+                        class="bi bi-bookmark-fill text-success fs-7 bg-darkgreen rounded-1 p-icons"
+                      >
+                      </i>
+                    </div>
+                    <span class="ms-2"> I tuoi episodi</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="row px-2" id="playlist-list">
+              <div class="col-12 gap-2">
+                <ul class="p-0 mt-3">
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                  <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- MUSIC PLAYLIST TAB  -->
+          <div class="col-7" id="right-bar"></div>
           <div
             id="friend-tab"
             class="col-2 text-bg-dark position-fixed end-0 h-100 overflow-y-auto"
