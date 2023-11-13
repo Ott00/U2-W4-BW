@@ -27,7 +27,7 @@
       <div class="container-fluid">
         <div class="row" id="left-side">
           <div class="col-3" id="left-bar">
-            <div class="row fs-6 border-bottom" id="hero-left-side">
+            <div class="row fs-6 border-bottom gy-1" id="hero-left-side">
               <div class="col-6">
                 <div class="dropdown">
                   <button
@@ -66,15 +66,28 @@
 
               <div class="col-10">
                 <ul class="p-0">
-                  <li><i class="bi bi-plus-square-fill"></i> Crea playlist</li>
                   <li>
-                    <i class="bi bi-suit-heart-fill"></i> Brani che ti piacciono
+                    <div class="d-inline-block" style="width: 20px">
+                      <i class="bi bi-plus-square-fill"></i>
+                    </div>
+                    <span>Crea playlist</span>
                   </li>
                   <li>
-                    <i
-                      class="bi bi-bookmark-fill text-success bg-success-subtle fs-6"
-                    ></i>
-                    I tuoi episodi
+                    <div class="d-inline-block" style="width: 20px">
+                      <i class="bi bi-suit-heart-fill"></i>
+                    </div>
+                    <span>Brani che ti piacciono</span>
+                  </li>
+                  <li>
+                    <div
+                      class="d-inline-block"
+                      style="width: 20px; height: 20px"
+                    >
+                      <i
+                        class="bi bi-bookmark-fill text-success d-flex justify-content-center fs-7 bg-darkgreen"
+                      ></i>
+                    </div>
+                    <span> I tuoi episodi</span>
                   </li>
                 </ul>
               </div>

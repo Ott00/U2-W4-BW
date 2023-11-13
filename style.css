@@ -18,3 +18,15 @@ ul {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.fs-7 {
+  font-size: 14px;
+}
+
+#hero-left-side ul li {
+  margin-bottom: 0.5rem;
+}
+
+.bg-darkgreen {
+  background-color: rgb(11, 60, 11);
+}
