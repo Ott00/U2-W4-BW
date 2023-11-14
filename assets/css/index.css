@@ -17,7 +17,7 @@ body {
   }
 }
 
-#hero-card {
+#album-body {
   background: linear-gradient(
     10deg,
     hsla(0, 0%, 0%, 1) 0%,
@@ -217,4 +217,20 @@ ul {
 
 .album-img-container {
   width: 40px;
+}
+
+/* card home changes */
+
+@media screen and (min-width: 1200px) {
+  .playlist-card {
+    max-height: 64px;
+  }
+  .playlist-card img {
+    max-width: 64px;
+    max-height: 64px;
+  }
+}
+
+#hero-btn {
+  background-color: #1ed760;
 }
