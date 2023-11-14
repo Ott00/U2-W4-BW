@@ -27,7 +27,7 @@ body {
   background-color: #202020;
 }
 
-#hero-card {
+#album-body {
   background: linear-gradient(
     10deg,
     hsla(0, 0%, 0%, 1) 0%,
@@ -138,4 +138,19 @@ ul {
 }
 .fs-icons {
   font-size: 1.45rem;
+}
+
+@media  screen and (min-width: 1200px) {
+
+  .playlist-card{
+    max-height: 64px;
+  }
+  .playlist-card img {
+    max-width: 64px;
+    max-height: 64px;
+  }
+}
+
+#hero-btn{
+  background-color: #1ED760;
 }
