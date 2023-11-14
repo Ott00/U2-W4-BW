@@ -6,17 +6,13 @@ body {
   background-color: #2d2d2d;
 }
 
-#central-bar {
+#central-bar-container {
   background: rgb(18, 18, 18);
   background: linear-gradient(
     0deg,
     rgba(18, 18, 18, 1) 0%,
     rgba(34, 34, 34, 1) 100%
   );
-}
-
-#nav-bar-central {
-  background-color: #202020;
 }
 
 #hero-card {
@@ -71,14 +67,29 @@ ul {
 }
 
 #playlist-list {
-  max-height: calc(100vh - 390px);
+  max-height: calc(100vh - 390px + 36px);
   overflow-y: auto;
   overflow-x: hidden;
 }
 
+@media screen and (min-width: 1200px) {
+  #playlist-list {
+    max-height: calc(100vh - 390px);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
 #central-bar {
-  max-height: calc(100vh - 147px);
+  max-height: calc(100vh - 217px + 54px + 16px);
   overflow-y: auto;
+}
+
+@media screen and (min-width: 768px) {
+  #central-bar {
+    max-height: calc(100vh - 217px);
+    overflow-y: auto;
+  }
 }
 
 #friend-container {
