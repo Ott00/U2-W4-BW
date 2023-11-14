@@ -184,3 +184,37 @@ ul {
   bottom: 110px;
   width: 94vw;
 }
+
+/* sezione artista */
+
+#central-bar-container.artist-head {
+  height: 370px;
+  background-image: url("https://images.unsplash.com/photo-1445375011782-2384686778a0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#verify-icon {
+  width: 25px;
+  color: #3d91f4;
+}
+
+#nav-bar-central {
+  background-color: transparent;
+}
+
+#artist-head-text {
+  height: 300px;
+}
+
+.icon-player-container {
+  width: 50px;
+  height: 50px;
+  background-color: #1ed760;
+  border-radius: 50%;
+}
+
+.album-img-container {
+  width: 40px;
+}
