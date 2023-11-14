@@ -2,14 +2,6 @@ body {
   overflow: hidden;
 }
 
-#right-bar,
-#left-bar {
-  background-color: black;
-}
-
-#play-bar {
-  background-color: #181818;
-}
 .card {
   background-color: #2d2d2d;
 }
@@ -35,32 +27,32 @@ body {
   );
 }
 
-#right-bar p {
+#friend-container p {
   font-size: 0.8rem;
 }
 
-#right-bar p:last-child {
+#friend-container p:last-child {
   font-size: 0.6rem;
 }
 
-#right-bar span {
+#friend-container span {
   font-size: 0.6rem;
 }
 
-#right-bar::-webkit-scrollbar-track,
+#friend-container::-webkit-scrollbar-track,
 #playlist-list::-webkit-scrollbar-track,
 #central-bar::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #00000018;
 }
 
-#right-bar::-webkit-scrollbar,
+#friend-container::-webkit-scrollbar,
 #playlist-list::-webkit-scrollbar,
 #central-bar::-webkit-scrollbar {
   width: 10px;
 }
 
-#right-bar::-webkit-scrollbar-thumb,
+#friend-container::-webkit-scrollbar-thumb,
 #playlist-list::-webkit-scrollbar-thumb,
 #central-bar::-webkit-scrollbar-thumb {
   background-color: rgb(66, 66, 66);
@@ -79,14 +71,20 @@ ul {
 }
 
 #playlist-list {
-  max-height: calc(100vh - 447px);
+  max-height: calc(100vh - 390px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#central-bar {
+  max-height: calc(100vh - 147px);
   overflow-y: auto;
 }
 
-#right-bar,
-#central-bar {
-  max-height: calc(100vh - 139px);
+#friend-container {
+  max-height: calc(100vh - 203px);
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 #playlist-list > div > ul > li {
@@ -138,4 +136,12 @@ ul {
 }
 .fs-icons {
   font-size: 1.45rem;
+}
+
+.bg-spotify {
+  background-color: #121212;
+}
+
+.bg-accent {
+  background-color: #2a2a2a;
 }
