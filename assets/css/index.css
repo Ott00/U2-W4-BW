@@ -6,13 +6,15 @@ body {
   background-color: #2d2d2d;
 }
 
-#central-bar-container {
-  background: rgb(18, 18, 18);
-  background: linear-gradient(
-    0deg,
-    rgba(18, 18, 18, 1) 0%,
-    rgba(34, 34, 34, 1) 100%
-  );
+@media screen and (min-width: 768px) {
+  #central-bar-container {
+    background: rgb(18, 18, 18);
+    background: linear-gradient(
+      0deg,
+      rgba(18, 18, 18, 1) 0%,
+      rgba(34, 34, 34, 1) 100%
+    );
+  }
 }
 
 #hero-card {
@@ -66,6 +68,22 @@ ul {
   height: 139px;
 }
 
+#play-bar {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 55%,
+    rgba(49, 36, 36, 0) 100%
+  );
+}
+
+@media screen and (min-width: 768px) {
+  #play-bar {
+    background: black;
+  }
+}
+
 #playlist-list {
   max-height: calc(100vh - 390px + 36px);
   overflow-y: auto;
@@ -81,7 +99,7 @@ ul {
 }
 
 #central-bar {
-  max-height: calc(100vh - 217px + 54px + 16px);
+  max-height: 100vh;
   overflow-y: auto;
 }
 
@@ -155,4 +173,14 @@ ul {
 
 .bg-accent {
   background-color: #2a2a2a;
+}
+
+.remove-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.song-fixed-player {
+  left: 16px;
+  bottom: 110px;
+  width: 94vw;
 }
