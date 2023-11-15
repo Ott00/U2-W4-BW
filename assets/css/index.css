@@ -245,8 +245,8 @@ ul {
 }
 
 .browse-card {
-  width: 200px;
-  height: 200px;
+  width: 12.5%;
+  aspect-ratio: 1/1;
   overflow: hidden;
 }
 
