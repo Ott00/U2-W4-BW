@@ -1,5 +1,5 @@
 .top-playlist {
-  top: 50px;
+  top: 69px;
 }
 
 #song-list img {
@@ -15,10 +15,9 @@
   opacity: 0.5;
 }
 
-@media screen and (min-width: 768px) {
-  #central-bar-container {
-    background: grey;
-  }
+#central-bar-container,
+#nav-bar-central {
+  background: rgb(112, 36, 36);
 }
 
 @media screen and (min-width: 768px) {

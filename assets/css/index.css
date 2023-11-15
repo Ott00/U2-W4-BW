@@ -232,5 +232,6 @@ ul {
 }
 
 #hero-btn {
-  background-color: #1ed760;
+  color: #1ed760;
+  font-size: 4rem;
 }
