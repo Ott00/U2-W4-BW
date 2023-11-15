@@ -4,6 +4,7 @@ const searchInput = document.getElementById("search-bar");
 const searchContainer = document.getElementById("search-container");
 
 const searchURL = "https://deezerdevs-deezer.p.rapidapi.com/search?q=";
+// const artistURL = "https://striveschool-api.herokuapp.com/api/deezer/artist/";
 
 const searchArtist = async function () {
   try {
@@ -24,8 +25,9 @@ const searchArtist = async function () {
 
     //Troviamo l'artista
     for (let i = 0; i < responseObj.data.length; i++) {
+      const element = responseObj.data[i];
       if (
-        responseObj.data[i].artist.name
+        element.artist.name
           .toLowerCase()
           .normalize("NFD")
           .replace(/[\u0300-\u036f]/g, "")
@@ -36,21 +38,23 @@ const searchArtist = async function () {
               .replace(/[\u0300-\u036f]/g, "")
           )
       ) {
-        const artist = responseObj.data[i].artist;
+        const artist = element.artist;
         // console.log(artist);
+        const artistId = element.artist.id;
+        console.log(artistId);
 
         searchContainer.innerHTML = "";
 
-        const titleArtist = document.createElement("h2");
-        titleArtist.classList = "col-6 mb-3";
-        titleArtist.innerText = "Risultato più rilevante";
-
         const titleSong = document.createElement("h2");
-        titleSong.classList = "col-6 mb-3";
+        titleSong.classList = "d-none d-lg-block col-6 mb-3";
         titleSong.innerText = "Brani";
 
+        const titleArtist = document.createElement("h2");
+        titleArtist.classList = "col-12 col-lg-6 mb-3";
+        titleArtist.innerText = "Risultato più rilevante";
+
         const col = document.createElement("div");
-        col.classList = "col-5 col-xxl-6";
+        col.classList = "col-12 col-lg-6";
 
         const artistCard = document.createElement("div");
         artistCard.classList = "card border-0 bg-spotify p-3";
@@ -82,6 +86,47 @@ const searchArtist = async function () {
         searchContainer.appendChild(col);
       }
     }
+
+    const col = document.createElement("div");
+    col.classList = "col-12 col-lg-6";
+
+    const list = document.createElement("ul");
+    list.classList = "m-0 p-0 mt-3 mt-lg-0 px-3 px-lg-0";
+
+    //Troviamo le sue canzoni più popolari
+    responseObj.data.forEach((element) => {
+      const listElem = document.createElement("li");
+      listElem.innerHTML = `
+      <li class="row mb-3 border-bottom py-2">
+        <div class="col-2 col-md-1">
+          <img
+            width="60px"
+            src="${element.album.cover_small}"
+            alt=""
+          />
+          </div>
+          <div class="col-8 col-md-9 d-flex align-items-center">
+          <div class="ms-1 ms-md-5 d-flex flex-column gap-1 w-100">
+            <h5 class="m-0 text-truncate">${element.title}</h5>
+            <div class="d-flex">
+              <span class="badge bg-secondary h-100 me-1">${
+                element.explicit_lyrics ? "E" : ""
+              }</span>
+              <p class="m-0 align-self-center">${element.artist.name}</p>
+            </div>
+          </div>
+          </div>
+        <div class="col-2 text-end align-self-center">${(
+          element.duration / 60
+        ).toFixed(2)}</div>
+      </li>
+      `;
+
+      list.appendChild(listElem);
+      col.appendChild(list);
+
+      searchContainer.appendChild(col);
+    });
 
     // const artist = responseObj.data[0].artist;
 
