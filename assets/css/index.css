@@ -235,3 +235,11 @@ ul {
   color: #1ed760;
   font-size: 4rem;
 }
+
+.card-badge{
+  top: 20px; 
+  right: -15px; 
+  z-index: 2;
+  background-color: #363636;
+  opacity: 50%;
+}
