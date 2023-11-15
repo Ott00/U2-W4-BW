@@ -12,8 +12,8 @@ const searchArtist = async function () {
       method: "GET",
       headers: {
         "X-RapidAPI-Key": "6969464db2msh57ee0909918148fp1b3cafjsn9608ba4cbef4",
-        "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
-      },
+        "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com"
+      }
     });
 
     if (!response.ok) {
@@ -88,7 +88,7 @@ const searchArtist = async function () {
         searchContainer.appendChild(col);
 
         allAlbums.push(element.album);
-        console.log(allAlbums);
+        // console.log(allAlbums);
       }
     }
 
@@ -139,12 +139,13 @@ const searchArtist = async function () {
 
     // ABBIAMO CREATO UN ARRAY DI ALBUM PER POI FILTRARLO IN BASE AL VALORE DEL SUO TITOLO , IN MODO DA ELIMIARE I DOPPIONI
     const filteredAlbums = [
-      ...new Map(allAlbums.map((element) => [element.title, element])).values(),
+      ...new Map(allAlbums.map((element) => [element.title, element])).values()
     ];
 
     console.log(filteredAlbums);
 
     localStorage.setItem("albums", JSON.stringify(filteredAlbums));
+    localStorage.setItem("dataObj", JSON.stringify(responseObj.data));
 
     // console.log(album);
   } catch (error) {
