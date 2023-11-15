@@ -375,9 +375,10 @@
                   </ul>
                 </div>
               </div>
-              <div id="central-bar-container" class="artist-head">
+              <!-- js da qua -->
+              <div id="central-bar-container" class="artist-head d-flex">
                 <div
-                  class="d-flex flex-column justify-content-end align-items-start ms-3"
+                  class="d-flex flex-column justify-content-end align-items-start ms-3 mb-3"
                   id="artist-head-text"
                 >
                   <div class="d-flex align-items-center gap-2">
@@ -397,8 +398,10 @@
                     </div>
                     <p class="m-0 fw-bold fs-7">Artista verificato</p>
                   </div>
-                  <h1 class="fs-big fw-bold mb-3">Yellowcard</h1>
-                  <h6 class="fs-8">3.433.158 ascoltatori mensili</h6>
+                  <h1 class="fs-big fw-bold mb-3" id="artist-name"></h1>
+                  <h6 class="fs-8">
+                    <span id="artist-fan"> </span> ascoltatori mensili
+                  </h6>
                 </div>
               </div>
               <!-- container degli album -->
@@ -432,214 +435,6 @@
                     <div class="my-3"><h3>Popolari</h3></div>
                     <div>
                       <ol class="pe-5">
-                        <li
-                          class="d-flex align-items-center justify-content-between mb-3"
-                        >
-                          <div class="d-flex align-items-center gap-3">
-                            <span>1</span>
-                            <div class="album-img-container">
-                              <img
-                                src="./assets/imgs/main/image-12.jpg"
-                                alt=""
-                                style="width: 100%"
-                              />
-                            </div>
-                            <span class="fs-5">Album Title</span>
-                          </div>
-                          <span>276.616.921</span> <span>3:18</span>
-                        </li>
-                        <li
-                          class="d-flex align-items-center justify-content-between mb-3"
-                        >
-                          <div class="d-flex align-items-center gap-3">
-                            <span>1</span>
-                            <div class="album-img-container">
-                              <img
-                                src="./assets/imgs/main/image-12.jpg"
-                                alt=""
-                                style="width: 100%"
-                              />
-                            </div>
-                            <span class="fs-5">Album Title</span>
-                          </div>
-                          <span>276.616.921</span> <span>3:18</span>
-                        </li>
-                        <li
-                          class="d-flex align-items-center justify-content-between mb-3"
-                        >
-                          <div class="d-flex align-items-center gap-3">
-                            <span>1</span>
-                            <div class="album-img-container">
-                              <img
-                                src="./assets/imgs/main/image-12.jpg"
-                                alt=""
-                                style="width: 100%"
-                              />
-                            </div>
-                            <span class="fs-5">Album Title</span>
-                          </div>
-                          <span>276.616.921</span> <span>3:18</span>
-                        </li>
-                        <li
-                          class="d-flex align-items-center justify-content-between mb-3"
-                        >
-                          <div class="d-flex align-items-center gap-3">
-                            <span>1</span>
-                            <div class="album-img-container">
-                              <img
-                                src="./assets/imgs/main/image-12.jpg"
-                                alt=""
-                                style="width: 100%"
-                              />
-                            </div>
-                            <span class="fs-5">Album Title</span>
-                          </div>
-                          <span>276.616.921</span> <span>3:18</span>
-                        </li>
-                        <li
-                          class="d-flex align-items-center justify-content-between mb-3"
-                        >
-                          <div class="d-flex align-items-center gap-3">
-                            <span>1</span>
-                            <div class="album-img-container">
-                              <img
-                                src="./assets/imgs/main/image-12.jpg"
-                                alt=""
-                                style="width: 100%"
-                              />
-                            </div>
-                            <span class="fs-5">Album Title</span>
-                          </div>
-                          <span>276.616.921</span> <span>3:18</span>
-                        </li>
-                        <li
-                          class="d-flex align-items-center justify-content-between mb-3"
-                        >
-                          <div class="d-flex align-items-center gap-3">
-                            <span>1</span>
-                            <div class="album-img-container">
-                              <img
-                                src="./assets/imgs/main/image-12.jpg"
-                                alt=""
-                                style="width: 100%"
-                              />
-                            </div>
-                            <span class="fs-5">Album Title</span>
-                          </div>
-                          <span>276.616.921</span> <span>3:18</span>
-                        </li>
-                        <li
-                          class="d-flex align-items-center justify-content-between mb-3"
-                        >
-                          <div class="d-flex align-items-center gap-3">
-                            <span>1</span>
-                            <div class="album-img-container">
-                              <img
-                                src="./assets/imgs/main/image-12.jpg"
-                                alt=""
-                                style="width: 100%"
-                              />
-                            </div>
-                            <span class="fs-5">Album Title</span>
-                          </div>
-                          <span>276.616.921</span> <span>3:18</span>
-                        </li>
-                        <li
-                          class="d-flex align-items-center justify-content-between mb-3"
-                        >
-                          <div class="d-flex align-items-center gap-3">
-                            <span>1</span>
-                            <div class="album-img-container">
-                              <img
-                                src="./assets/imgs/main/image-12.jpg"
-                                alt=""
-                                style="width: 100%"
-                              />
-                            </div>
-                            <span class="fs-5">Album Title</span>
-                          </div>
-                          <span>276.616.921</span> <span>3:18</span>
-                        </li>
-                        <li
-                          class="d-flex align-items-center justify-content-between mb-3"
-                        >
-                          <div class="d-flex align-items-center gap-3">
-                            <span>1</span>
-                            <div class="album-img-container">
-                              <img
-                                src="./assets/imgs/main/image-12.jpg"
-                                alt=""
-                                style="width: 100%"
-                              />
-                            </div>
-                            <span class="fs-5">Album Title</span>
-                          </div>
-                          <span>276.616.921</span> <span>3:18</span>
-                        </li>
-                        <li
-                          class="d-flex align-items-center justify-content-between mb-3"
-                        >
-                          <div class="d-flex align-items-center gap-3">
-                            <span>1</span>
-                            <div class="album-img-container">
-                              <img
-                                src="./assets/imgs/main/image-12.jpg"
-                                alt=""
-                                style="width: 100%"
-                              />
-                            </div>
-                            <span class="fs-5">Album Title</span>
-                          </div>
-                          <span>276.616.921</span> <span>3:18</span>
-                        </li>
-                        <li
-                          class="d-flex align-items-center justify-content-between mb-3"
-                        >
-                          <div class="d-flex align-items-center gap-3">
-                            <span>1</span>
-                            <div class="album-img-container">
-                              <img
-                                src="./assets/imgs/main/image-12.jpg"
-                                alt=""
-                                style="width: 100%"
-                              />
-                            </div>
-                            <span class="fs-5">Album Title</span>
-                          </div>
-                          <span>276.616.921</span> <span>3:18</span>
-                        </li>
-                        <li
-                          class="d-flex align-items-center justify-content-between mb-3"
-                        >
-                          <div class="d-flex align-items-center gap-3">
-                            <span>1</span>
-                            <div class="album-img-container">
-                              <img
-                                src="./assets/imgs/main/image-12.jpg"
-                                alt=""
-                                style="width: 100%"
-                              />
-                            </div>
-                            <span class="fs-5">Album Title</span>
-                          </div>
-                          <span>276.616.921</span> <span>3:18</span>
-                        </li>
-                        <li
-                          class="d-flex align-items-center justify-content-between mb-3"
-                        >
-                          <div class="d-flex align-items-center gap-3">
-                            <span>1</span>
-                            <div class="album-img-container">
-                              <img
-                                src="./assets/imgs/main/image-12.jpg"
-                                alt=""
-                                style="width: 100%"
-                              />
-                            </div>
-                            <span class="fs-5">Album Title</span>
-                          </div>
-                          <span>276.616.921</span> <span>3:18</span>
-                        </li>
                         <li
                           class="d-flex align-items-center justify-content-between mb-3"
                         >
