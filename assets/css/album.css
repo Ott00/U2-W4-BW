@@ -26,3 +26,14 @@
     overflow-y: auto;
   }
 }
+
+.icon-player-container {
+  width: 56px;
+  height: 56px;
+  background-color: #1ed760;
+  border-radius: 50%;
+}
+
+.mb-mobile {
+  margin-bottom: 220px;
+}
