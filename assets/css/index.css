@@ -235,3 +235,30 @@ ul {
   color: #1ed760;
   font-size: 4rem;
 }
+
+.card-badge{
+  top: 20px; 
+  right: -15px; 
+  z-index: 2;
+  background-color: #363636;
+  opacity: 50%;
+}
+
+.browse-card {
+  width: 12.5%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.rotate-image{
+  rotate: 30deg;
+  width: 70%;
+  position: absolute;
+  bottom: -20px;
+  right: -16px;
+}
+
+.browse-title {
+  top: 5px;
+  left: 10px;
+}
