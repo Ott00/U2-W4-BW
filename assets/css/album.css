@@ -15,10 +15,10 @@
   opacity: 0.5;
 }
 
-#central-bar-container,
+/* #central-bar-container,
 #nav-bar-central {
-  background: rgb(112, 36, 36);
-}
+  background:#9C2226
+} */
 
 @media screen and (min-width: 768px) {
   #central-bar {
