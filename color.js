@@ -30,7 +30,7 @@ window.onload = () => {
             console.log(colorStr)
             const rgbValue = colorStr.replaceAll("[", "(").replaceAll("]", ")")
             console.log(rgbValue)
-            const changeBg = elem.closest("")
+            const changeBg = elem.closest("div")
             changeBg.style.backgroundColor = "rgb" + rgbValue;
         })
     }
