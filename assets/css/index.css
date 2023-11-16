@@ -126,8 +126,15 @@ ul {
 }
 
 .fs-big {
-  font-size: 80px;
+  font-size: 24px;
 }
+
+@media screen and (min-width: 768px) {
+  .fs-big {
+    font-size: 80px;
+  }
+}
+
 .fs-7 {
   font-size: 14px;
 }
@@ -236,9 +243,9 @@ ul {
   font-size: 4rem;
 }
 
-.card-badge{
-  top: 20px; 
-  right: -15px; 
+.card-badge {
+  top: 20px;
+  right: -15px;
   z-index: 2;
   background-color: #363636;
   opacity: 50%;
@@ -250,7 +257,7 @@ ul {
   overflow: hidden;
 }
 
-.rotate-image{
+.rotate-image {
   rotate: 30deg;
   width: 70%;
   position: absolute;

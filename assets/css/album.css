@@ -1,5 +1,11 @@
 .top-playlist {
-  top: 69px;
+  top: unset;
+}
+
+@media screen and (min-width: 768px) {
+  .top-playlist {
+    top: 69px;
+  }
 }
 
 #song-list img {
@@ -36,4 +42,15 @@
 
 .mb-mobile {
   margin-bottom: 220px;
+}
+
+#mobile-sticky {
+  position: sticky;
+  top: -8px;
+  z-index: 2;
+  margin: -1rem;
+}
+
+#name-album-2 {
+  display: none;
 }

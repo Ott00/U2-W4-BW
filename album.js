@@ -47,8 +47,8 @@ const albumPage = async function () {
       method: "GET",
       headers: {
         "X-RapidAPI-Key": "6969464db2msh57ee0909918148fp1b3cafjsn9608ba4cbef4",
-        "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
-      },
+        "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com"
+      }
     });
 
     const album = await response.json();
@@ -65,6 +65,9 @@ const albumPage = async function () {
 
     const albumCover = document.getElementById("album-cover");
     const albumTitle = document.getElementById("album-title");
+
+    const albumTitleOnStickyBar = document.getElementById("name-album-2");
+
     const albumArtistName = document.getElementById("album-artist");
     const albumYear = document.getElementById("album-year");
     const albumTotalSongs = document.getElementById("album-total-songs");
@@ -73,9 +76,9 @@ const albumPage = async function () {
       "profile-picture-album-page"
     );
 
-    albumCover.src = album.cover_medium;
+    albumCover.src = album.cover_xl;
     albumTitle.innerText = album.title;
-
+    albumTitleOnStickyBar.innerText = album.title;
     albumArtistProfileImg.src = album.artist.picture_small;
     albumArtistName.innerText = album.artist.name;
     albumYear.innerText = album.release_date.substr(0, 4);
@@ -92,4 +95,34 @@ const albumPage = async function () {
 
 window.onload = () => {
   albumPage();
+
+  // const containerTitle = document.getElementById("container-title");
+  // const albumTitleOnStickyBar = document.getElementById("name-album-2");
+
+  // window.addEventListener("scroll", function () {
+  //   let containerTop = containerTitle.getBoundingClientRect().top;
+
+  //   if (containerTop <= 0) {
+  //     // La parte superiore del contenitore è al top o sopra la viewport
+  //     albumTitleOnStickyBar.style.display = "block";
+  //   } else {
+  //     // La parte superiore del contenitore è sotto la viewport
+  //     albumTitleOnStickyBar.style.display = "none";
+  //   }
+  // });
+
+  // containerTitle.addEventListener("scroll", function (e) {
+  //   console.log(e);
+  //   const scrollPosition = containerTitle.scrollY;
+
+  //   const navbar = document.querySelector("nav");
+  //   const navBtn = document.getElementById("nav-button");
+  //   if (scrollPosition >= 350) {
+  //     navbar.className = "scrollNav";
+  //     navBtn.className = "scrollNavBtn";
+  //   } else {
+  //     navbar.className = "scrollNavBack";
+  //     navBtn.className = "scrollNavBtnBack";
+  //   }
+  // });
 };

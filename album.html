@@ -326,7 +326,9 @@
                     id="album-banner"
                     class="row py-3 d-flex align-items-end w-100"
                   >
-                    <div class="col-4">
+                    <div
+                      class="col-10 offset-1 mt-4 col-md-4 offset-md-0 mt-md-0"
+                    >
                       <img
                         src=""
                         class="img-fluid d-block p-2"
@@ -335,7 +337,7 @@
                         id="album-cover"
                       />
                     </div>
-                    <div class="col-8">
+                    <div class="col-12 col-md-8">
                       <div class="d-flex justify-content-between">
                         <p class="fs-6 m-0">Album</p>
                       </div>
@@ -356,9 +358,15 @@
                         <i class="bi bi-dot"></i>
                         <span id="album-year" class="fs-7"></span>
                         <i class="bi bi-dot"></i>
-                        <span id="album-total-songs" class="fs-7"></span>
+                        <span
+                          id="album-total-songs"
+                          class="d-none d-md-inline-block fs-7"
+                        ></span>
 
-                        <span id="album-total-time" class="fs-7"></span>
+                        <span
+                          id="album-total-time"
+                          class="d-none d-md-inline-block fs-7"
+                        ></span>
                       </div>
                     </div>
                   </div>
@@ -367,8 +375,8 @@
               <!-- container degli album + bottoni-->
               <div class="px-3">
                 <!-- bottoni -->
-                <div class="d-flex">
-                  <button type="button" class="btn">
+                <div id="mobile-sticky" class="d-flex bg-spotify">
+                  <button type="button" class="order-3 order-md-0 btn my-2">
                     <!-- <i id="hero-btn" class="bi bi-play-circle-fill"></i> -->
                     <div
                       class="icon-player-container d-flex justify-content-center align-items-center text-dark"
@@ -387,10 +395,16 @@
                       </svg>
                     </div>
                   </button>
-                  <button type="button" class="btn rounded-circle border-0">
+                  <button
+                    type="button"
+                    class="order-2 order-md-0 btn rounded-circle border-0"
+                  >
                     <i class="bi bi-shuffle fs-3"></i>
                   </button>
-                  <button type="button" class="btn rounded-circle border-0">
+                  <button
+                    type="button"
+                    class="d-none d-md-inline-block btn rounded-circle border-0"
+                  >
                     <i class="bi bi-heart fs-3"></i>
                   </button>
                   <button type="button" class="btn rounded-circle border-0">
@@ -399,14 +413,26 @@
                   <button type="button" class="btn rounded-circle border-0">
                     <i class="bi bi-three-dots fs-3"></i>
                   </button>
-                  <div class="m-auto"></div>
-                  <button type="button" class="btn rounded-circle border-0">
+                  <div id="container-title" class="m-auto">
+                    <span class="" id="name-album-2"></span>
+                    <!-- <span class="d-none d-md-none" id="name-album-2"></span> -->
+                  </div>
+                  <button
+                    type="button"
+                    class="d-none d-md-inline-block btn rounded-circle border-0"
+                  >
                     <i class="bi bi-search"></i>
                   </button>
-                  <button type="button" class="btn rounded-pill border-0">
+                  <button
+                    type="button"
+                    class="d-none d-md-inline-block btn rounded-pill border-0"
+                  >
                     Custom Order
                   </button>
-                  <button type="button" class="btn rounded-circle border-0">
+                  <button
+                    type="button"
+                    class="d-none d-md-inline-block btn rounded-circle border-0"
+                  >
                     <i class="bi bi-list-ul"></i>
                   </button>
                 </div>
