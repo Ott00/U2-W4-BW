@@ -391,45 +391,41 @@
                 >
                   <div
                     id="album-banner"
-                    class="row py-3 d-flex align-items-end"
+                    class="row py-3 d-flex align-items-end w-100"
                   >
                     <div class="col-4">
                       <img
-                        src="./assets/imgs/main/image-11.jpg"
+                        src="./assets/imgs/main/image-10.jpg"
                         class="img-fluid d-block p-2"
                         alt="..."
                         width="100%"
+                        id="album-cover"
                       />
                     </div>
                     <div class="col-8">
                       <div class="d-flex justify-content-between">
-                        <p class="fs-6 m-0 text-uppercase">Album</p>
+                        <p class="fs-6 m-0">Album</p>
                       </div>
                       <!-- ALBUM TITLE -->
-                      <h1 class="fs-big fw-bold text-capitalize">
-                        album title
-                      </h1>
+                      <h1
+                        class="fs-big fw-bold text-capitalize text-truncate"
+                        id="album-title"
+                      ></h1>
                       <div class="p-1 pe-3 rounded-pill">
                         <img
                           src="./assets/imgs/main/image-1.jpg"
                           alt="profile picture"
                           class="rounded-pill border border-light"
                           width="25px"
+                          id="profile-picture-album-page"
                         />
-                        <span id="album-artist" class="fs-6 fw-bold ms-3"
-                          >Artist Name</span
-                        >
+                        <span id="album-artist" class="fs-7 fw-bold"></span>
                         <i class="bi bi-dot"></i>
-                        <span id="album-year" class="fs-6 fw-bold ms-1"
-                          >#YEAR</span
-                        >
+                        <span id="album-year" class="fs-7"></span>
                         <i class="bi bi-dot"></i>
-                        <span id="album-total-songs" class="fs-6 fw-bold ms-1"
-                          >## songs,</span
-                        >
-                        <span id="album-total-time" class="fs-6 fw-bold"
-                          >## min #sec</span
-                        >
+                        <span id="album-total-songs" class="fs-7"></span>
+
+                        <span id="album-total-time" class="fs-7"></span>
                       </div>
                     </div>
                   </div>
@@ -467,7 +463,7 @@
                 </div>
                 <!-- fine bottoni -->
                 <div>
-                  <ol class="p-0">
+                  <ol class="p-0" id="album-tracks-list">
                     <!-- PLAYLIST HEADER -->
                     <li
                       id="playlist-header"
@@ -481,7 +477,7 @@
                       </div>
                     </li>
                     <!-- ROW CANZONE -->
-                    <li class="row mb-3">
+                    <!-- <li class="row mb-3">
                       <div class="col-1 text-start pe-0 align-self-center">
                         1
                       </div>
@@ -497,433 +493,8 @@
                       <div class="col-3 text-end px-1 align-self-center">
                         3:09
                       </div>
-                    </li>
+                    </li> -->
                     <!-- ^^ FINE ROW CANZONE -->
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        2
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:14
-                      </div>
-                    </li>
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        1
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:09
-                      </div>
-                    </li>
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        2
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:14
-                      </div>
-                    </li>
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        1
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:09
-                      </div>
-                    </li>
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        2
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:14
-                      </div>
-                    </li>
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        1
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:09
-                      </div>
-                    </li>
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        2
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:14
-                      </div>
-                    </li>
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        1
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:09
-                      </div>
-                    </li>
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        2
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:14
-                      </div>
-                    </li>
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        1
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:09
-                      </div>
-                    </li>
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        2
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:14
-                      </div>
-                    </li>
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        1
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:09
-                      </div>
-                    </li>
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        2
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:14
-                      </div>
-                    </li>
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        1
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:09
-                      </div>
-                    </li>
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        2
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:14
-                      </div>
-                    </li>
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        1
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:09
-                      </div>
-                    </li>
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        2
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:14
-                      </div>
-                    </li>
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        1
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:09
-                      </div>
-                    </li>
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        2
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:14
-                      </div>
-                    </li>
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        1
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:09
-                      </div>
-                    </li>
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        2
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:14
-                      </div>
-                    </li>
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        1
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:09
-                      </div>
-                    </li>
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        2
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:14
-                      </div>
-                    </li>
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        1
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:09
-                      </div>
-                    </li>
-                    <li class="row mb-3">
-                      <div class="col-1 text-start pe-0 align-self-center">
-                        2
-                      </div>
-                      <div class="col-4 text-start px-0 ps-2 align-self-center">
-                        <div class="d-flex flex-column justify-content-center">
-                          <span>Titolo Canzone</span>
-                          <span class="fs-8">Artista</span>
-                        </div>
-                      </div>
-                      <div class="col-4 text-end px-0 align-self-center">
-                        200.999
-                      </div>
-                      <div class="col-3 text-end px-1 align-self-center">
-                        3:14
-                      </div>
-                    </li>
                   </ol>
                 </div>
                 <!-- FINE CONTAINER ALBUM -->
@@ -1320,5 +891,6 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="./album.js"></script>
   </body>
 </html>

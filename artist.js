@@ -10,18 +10,25 @@ const artistPageAlbumList = async function () {
   const albumContainer = document.createElement("div");
   albumContainer.classList = "d-flex flex-wrap gap-3 my-4";
 
-  artistAlbums.forEach((element) => {
+  artistAlbums.forEach((album) => {
     const albumItem = document.createElement("div");
     albumItem.classList = "album-card bg-dark p-2 rounded h-100";
     albumItem.innerHTML = `
       <img
          width="100%"
         class="img-fluid rounded"
-        src="${element.cover_xl}"
+        src="${album.cover_xl}"
         alt=""/>
-      <span class="d-block fs-6 mt-1 text-truncate fw-bold ">${element.title}</span>
+      <span class="d-block fs-6 mt-1 text-truncate fw-bold ">${album.title}</span>
       <p class="fs-7">Album</p>
     `;
+
+    // console.log(album.id);
+    const albumId = album.id;
+    albumItem.addEventListener("click", () => {
+      window.location.assign("./album.html?albumId=" + albumId);
+    });
+
     albumContainer.appendChild(albumItem);
   });
 
@@ -89,8 +96,8 @@ const artistPage = async function () {
       method: "GET",
       headers: {
         "X-RapidAPI-Key": "6969464db2msh57ee0909918148fp1b3cafjsn9608ba4cbef4",
-        "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com"
-      }
+        "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+      },
     });
 
     const artist = await response.json();
