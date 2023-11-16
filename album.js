@@ -16,9 +16,12 @@ const trackList = async function (tracks) {
     trackListElement.classList = "row mb-3";
 
     trackListElement.innerHTML = `     
-    <div class="col-1 text-start pe-0 align-self-center">
-        ${counter++}
-    </div>
+      <div class="col-1 text-start pe-0 align-self-center" id="play-btn" role="button" 
+      onclick="play('${track.preview}')">
+          ${counter++} 
+          
+      </div>
+
     <div class="col-4 text-start px-0 ps-2 align-self-center">
     <div class="d-flex flex-column justify-content-center">
      <span>${track.title}</span>
@@ -33,8 +36,16 @@ const trackList = async function (tracks) {
     </div>`;
 
     trackListContainer.appendChild(trackListElement);
+
+    // const playBtn = trackListElement.getElementById("play-btn");
+    // console.log(playBtn);
   });
 };
+function play(prew) {
+  let audio = new Audio(prew);
+  audio.play();
+  console.log(prew);
+}
 
 const albumPage = async function () {
   const params = new URLSearchParams(window.location.search);
@@ -47,8 +58,8 @@ const albumPage = async function () {
       method: "GET",
       headers: {
         "X-RapidAPI-Key": "6969464db2msh57ee0909918148fp1b3cafjsn9608ba4cbef4",
-        "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com"
-      }
+        "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+      },
     });
 
     const album = await response.json();
