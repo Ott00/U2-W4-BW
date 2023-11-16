@@ -71,11 +71,13 @@ const trackList = async function (tracks) {
 
         // Se il link del nuovo audio è diverso dall'audio corrente, avvia la nuova traccia
         if (audioCorrente.src !== trackPreviewLink) {
+          audioCorrente.src = null;
           console.log(audioCorrente.src);
-          new Audio(trackPreviewLink).play();
+          audioCorrente = new Audio(trackPreviewLink);
+          audioCorrente.play();
         } else {
           // Se il link è lo stesso, imposta l'audio corrente a null (stop)
-          audioCorrente = null;
+          audioCorrente.src = null;
         }
       } else {
         // Se non c'è un audio corrente, avvia la riproduzione del nuovo audio
@@ -100,8 +102,8 @@ const albumPage = async function () {
       method: "GET",
       headers: {
         "X-RapidAPI-Key": "6969464db2msh57ee0909918148fp1b3cafjsn9608ba4cbef4",
-        "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com"
-      }
+        "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
+      },
     });
 
     const album = await response.json();
