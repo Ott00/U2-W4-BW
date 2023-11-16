@@ -3,7 +3,7 @@ const img = document.getElementById('album-image');
 console.log(img)
 const tiltedImg = document.getElementsByClassName("rotate-image");
 console.log(tiltedImg)
-// Make sure image is finished loading
+
 window.onload = () => {
     if (img) {
         const color = colorThief.getColor(img);
@@ -16,9 +16,6 @@ window.onload = () => {
         changeBg.style.backgroundColor = "rgb" + rgbValue;
     }
     else {
-        // img.addEventListener('load', function () {
-        //     colorThief.getColor(img);
-        // });
 
         imgArr = Array.from(tiltedImg)
         console.log(imgArr)
