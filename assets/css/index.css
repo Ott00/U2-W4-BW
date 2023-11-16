@@ -248,6 +248,7 @@ ul {
   width: 12.5%;
   aspect-ratio: 1/1;
   overflow: hidden;
+
 }
 
 .rotate-image{
@@ -256,9 +257,11 @@ ul {
   position: absolute;
   bottom: -20px;
   right: -16px;
+  box-shadow: #0b0b0b 0px 9px 9px 2px;
 }
 
 .browse-title {
   top: 5px;
   left: 10px;
+  z-index: 3;
 }
