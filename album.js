@@ -74,6 +74,8 @@ const trackList = async function (tracks) {
           audioCorrente.src = null;
           console.log(audioCorrente.src);
           audioCorrente = new Audio(trackPreviewLink);
+          aggiornaInputRange();
+          playBarItems(track);
           audioCorrente.play();
         } else {
           // Se il link è lo stesso, imposta l'audio corrente a null (stop)
@@ -82,14 +84,36 @@ const trackList = async function (tracks) {
       } else {
         // Se non c'è un audio corrente, avvia la riproduzione del nuovo audio
         audioCorrente = new Audio(trackPreviewLink);
+        aggiornaInputRange();
+        playBarItems(track);
         audioCorrente.play();
         console.log(audioCorrente);
       }
     });
-
     trackListContainer.appendChild(trackListElement);
   });
+
+  //FUNZIONI CHE PER IL CAMBIO DEL TEMPO DELLA CANZONE (VA MALE)
+
+  function aggiornaInputRange() {
+    if (audioCorrente) {
+      var progress = (audioCorrente.currentTime / audioCorrente.duration) * 100;
+      formRange.value = progress;
+    } else {
+      formRange.value = 0;
+    }
+  }
+
+  const formRange = document.getElementById("form-range");
+
+  formRange.addEventListener("input", function () {
+    var nuovoTempo = (formRange.value / 100) * audioCorrente.duration;
+    audioCorrente.currentTime = nuovoTempo;
+  });
 };
+
+const playBarSongTitle = document.getElementById("playbar-song-title");
+const playBarArtistName = document.getElementById("playbar-artist-name");
 
 const albumPage = async function () {
   const params = new URLSearchParams(window.location.search);
@@ -130,6 +154,7 @@ const albumPage = async function () {
     const albumArtistProfileImg = document.getElementById(
       "profile-picture-album-page"
     );
+    const playBarImg = document.getElementById("playbar-img");
 
     albumCover.src = album.cover_xl;
     albumTitle.innerText = album.title;
@@ -139,13 +164,20 @@ const albumPage = async function () {
     albumYear.innerText = album.release_date.substr(0, 4);
     albumTotalSongs.innerText = album.nb_tracks + " brani,";
     albumTotalTime.innerText = convertSecondsToMinutes(album.duration);
-
+    playBarImg.src = album.cover;
+    playBarSongTitle.innerText = "";
+    playBarArtistName.innerText = "";
     console.log(album.tracks);
 
     trackList(album.tracks.data);
   } catch (error) {
     console.log("errore nella ricerca dell'album", error);
   }
+};
+
+const playBarItems = (track) => {
+  playBarSongTitle.innerText = track.title;
+  playBarArtistName.innerText = track.artist.name;
 };
 
 window.onload = () => {
