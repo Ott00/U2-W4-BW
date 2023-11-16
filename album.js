@@ -11,13 +11,37 @@ const trackList = async function (tracks) {
     return result;
   }
 
+  let audioCorrente = null; // Memorizza l'audio corrente
+
   tracks.forEach((track) => {
     const trackListElement = document.createElement("li");
     trackListElement.classList = "row mb-3";
 
     trackListElement.innerHTML = `     
-    <div class="col-1 text-start pe-0 align-self-center" role="button">
-        ${counter++}
+    <div class="wrapper col-1 text-start pe-0 align-self-center" role="button">
+        <span class="box1">${counter++}</span>
+        <span class="box2">
+        <span class="d-none">${track.preview}</span>
+        <button type="button" class=" btn text-start">
+                 <div
+                   class="icon-player-container d-flex justify-content-center align-items-center text-dark"
+                   style="width: 25px; height: 25px"
+                 >
+                   <svg
+                     data-encore-id="icon"
+                     role="img"
+                     aria-hidden="true"
+                     viewBox="0 0 24 24"
+                     class="Svg-sc-ytk21e-0 iYxpxA"
+                     style="width: 10px; height: 10px"
+                   >
+                     <path
+                       d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                     ></path>
+                   </svg>
+                 </div>
+               </button>
+        </span>
     </div>
     <div class="col-4 text-start px-0 ps-2 align-self-center">
     <div class="d-flex flex-column justify-content-center">
@@ -32,13 +56,33 @@ const trackList = async function (tracks) {
      ${convertSecondsToMinutesTracks(track.duration)}
     </div>`;
 
-    const playBtn = trackListElement.getElementsByClassName("col-1")[0];
-    console.log(playBtn);
+    const playBtnContent = trackListElement.getElementsByTagName("span")[0];
+    const playBtn = trackListElement.getElementsByTagName("span")[1];
+    const trackPreviewLink =
+      trackListElement.getElementsByTagName("span")[2].innerText;
+
+    console.log(audioCorrente);
 
     playBtn.addEventListener("click", function () {
-      const audio = new Audio(track.preview);
-      console.log(audio);
-      audio.play();
+      // Se c'è un audio corrente, interrompi la riproduzione
+
+      if (audioCorrente) {
+        audioCorrente.pause();
+
+        // Se il link del nuovo audio è diverso dall'audio corrente, avvia la nuova traccia
+        if (audioCorrente.src !== trackPreviewLink) {
+          console.log(audioCorrente.src);
+          new Audio(trackPreviewLink).play();
+        } else {
+          // Se il link è lo stesso, imposta l'audio corrente a null (stop)
+          audioCorrente = null;
+        }
+      } else {
+        // Se non c'è un audio corrente, avvia la riproduzione del nuovo audio
+        audioCorrente = new Audio(trackPreviewLink);
+        audioCorrente.play();
+        console.log(audioCorrente);
+      }
     });
 
     trackListContainer.appendChild(trackListElement);

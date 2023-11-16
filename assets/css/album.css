@@ -54,3 +54,32 @@
 #name-album-2 {
   display: none;
 }
+
+.box1,
+.box2 {
+  width: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.box1 {
+  display: block;
+}
+
+.box2 {
+  display: none;
+}
+
+.wrapper {
+  width: auto;
+  display: inline-block;
+}
+
+.wrapper:hover .box1 {
+  display: none;
+}
+
+.wrapper:hover .box2 {
+  display: block;
+}
