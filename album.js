@@ -16,7 +16,7 @@ const trackList = async function (tracks) {
     trackListElement.classList = "row mb-3";
 
     trackListElement.innerHTML = `     
-    <div class="col-1 text-start pe-0 align-self-center">
+    <div class="col-1 text-start pe-0 align-self-center" role="button">
         ${counter++}
     </div>
     <div class="col-4 text-start px-0 ps-2 align-self-center">
@@ -31,6 +31,15 @@ const trackList = async function (tracks) {
     <div class="col-3 text-end px-1 align-self-center">
      ${convertSecondsToMinutesTracks(track.duration)}
     </div>`;
+
+    const playBtn = trackListElement.getElementsByClassName("col-1")[0];
+    console.log(playBtn);
+
+    playBtn.addEventListener("click", function () {
+      const audio = new Audio(track.preview);
+      console.log(audio);
+      audio.play();
+    });
 
     trackListContainer.appendChild(trackListElement);
   });
