@@ -63,6 +63,7 @@ const searchArtist = async function () {
 
         artistCard.addEventListener("click", function () {
           window.location.assign("./artist.html?artistId=" + artistId);
+          searchInput.value = "";
         });
 
         const cardImg = document.createElement("img");

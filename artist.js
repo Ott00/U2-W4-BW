@@ -2,12 +2,36 @@ const artistHead = document.getElementById("central-bar-container");
 const artistName = document.getElementById("artist-name");
 const artistFan = document.getElementById("artist-fan");
 
+const artistPageAlbumList = async function () {
+  const artistAlbums = JSON.parse(localStorage.getItem("albums"));
+  console.log(artistAlbums);
+
+  const artistiRepertoire = document.getElementById("artist-repertoire");
+  const albumContainer = document.createElement("div");
+  albumContainer.classList = "d-flex flex-wrap gap-3 my-4";
+
+  artistAlbums.forEach((element) => {
+    const albumItem = document.createElement("div");
+    albumItem.classList = "album-card bg-dark p-2 rounded h-100";
+    albumItem.innerHTML = `
+      <img
+         width="100%"
+        class="img-fluid rounded"
+        src="${element.cover_xl}"
+        alt=""/>
+      <span class="d-block fs-6 mt-1 text-truncate fw-bold ">${element.title}</span>
+      <p class="fs-7">Album</p>
+    `;
+    albumContainer.appendChild(albumItem);
+  });
+
+  artistiRepertoire.appendChild(albumContainer);
+};
+
 const artistPageSongsList = async function (numberoOfElement = 5) {
   //ABBIAMO RIPESCATO DALOCAL S. TUTTI GLI ALBUM SALVATI AL MOMENTO DEL SEARCH (FILTRATI PER NON AVERE DOPPIONI)
-  const artistAlbums = JSON.parse(localStorage.getItem("albums"));
-  const dataObj = JSON.parse(localStorage.getItem("dataObj"));
 
-  console.log(artistAlbums);
+  const dataObj = JSON.parse(localStorage.getItem("dataObj"));
   console.log(dataObj);
 
   const list = document.getElementById("list-popular-songs");
@@ -78,6 +102,7 @@ const artistPage = async function () {
     console.log("errore nella creazione dinamica", error);
   }
   artistPageSongsList();
+  artistPageAlbumList();
 };
 
 window.onload = () => {
