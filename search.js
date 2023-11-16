@@ -61,6 +61,10 @@ const searchArtist = async function () {
         const artistCard = document.createElement("div");
         artistCard.classList = "card border-0 bg-spotify p-3";
 
+        artistCard.addEventListener("click", function () {
+          window.location.assign("./artist.html?artistId=" + artistId);
+        });
+
         const cardImg = document.createElement("img");
         cardImg.classList = "card-img-top w-25 rounded-circle shadow-lg";
         cardImg.src = artist.picture_big;
@@ -96,7 +100,8 @@ const searchArtist = async function () {
     col.classList = "col-12 col-lg-6";
 
     const list = document.createElement("ul");
-    list.classList = "m-0 p-0 mt-3 mt-lg-0 px-3 px-lg-0";
+    list.classList = "m-0 p-0 mt-3 mt-lg-0 px-3 px-lg-1";
+    list.setAttribute("id", "list-songs");
 
     //Troviamo le sue canzoni più popolari
     responseObj.data.forEach((element) => {
@@ -156,4 +161,14 @@ const searchArtist = async function () {
 searchForm.addEventListener("submit", function (event) {
   event.preventDefault();
   searchArtist();
+
+  const backBtn = document.getElementById("go-back");
+  backBtn.addEventListener("click", () => {
+    history.back();
+  });
+
+  const forwardBtn = document.getElementById("go-forward");
+  forwardBtn.addEventListener("click", () => {
+    history.forward();
+  });
 });

@@ -1,0 +1,24 @@
+#list-songs {
+  height: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 992px) {
+  #list-songs {
+    height: 280px;
+  }
+}
+
+#list-songs::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #00000018;
+}
+
+#list-songs::-webkit-scrollbar {
+  width: 10px;
+}
+
+#list-songs::-webkit-scrollbar-thumb {
+  background-color: rgb(66, 66, 66);
+}

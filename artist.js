@@ -51,9 +51,9 @@ const artistPageSongsList = async function (numberoOfElement = 5) {
 
 const artistPage = async function () {
   const params = new URLSearchParams(window.location.search);
-  // const artistId = params.get("artistId");
+  const artistId = params.get("artistId");
 
-  const artistId = 7371074;
+  // const artistId = 7371074;
 
   const artistURL = "https://deezerdevs-deezer.p.rapidapi.com/artist/";
   //   if (!artistId) {
@@ -93,5 +93,15 @@ window.onload = () => {
     showMoreSongs.innerText =
       showMoreSongsNumber === 10 ? "Mostra meno" : "Visualizza altro";
     artistPageSongsList(showMoreSongsNumber);
+  });
+
+  const backBtn = document.getElementById("go-back");
+  backBtn.addEventListener("click", () => {
+    history.back();
+  });
+
+  const forwardBtn = document.getElementById("go-forward");
+  forwardBtn.addEventListener("click", () => {
+    history.forward();
   });
 };
