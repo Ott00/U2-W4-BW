@@ -1,5 +1,11 @@
 .top-playlist {
-  top: 69px;
+  top: unset;
+}
+
+@media screen and (min-width: 768px) {
+  .top-playlist {
+    top: 69px;
+  }
 }
 
 #song-list img {
@@ -25,4 +31,26 @@
     max-height: calc(100vh - 147px);
     overflow-y: auto;
   }
+}
+
+.icon-player-container {
+  width: 56px;
+  height: 56px;
+  background-color: #1ed760;
+  border-radius: 50%;
+}
+
+.mb-mobile {
+  margin-bottom: 220px;
+}
+
+#mobile-sticky {
+  position: sticky;
+  top: -8px;
+  z-index: 2;
+  margin: -1rem;
+}
+
+#name-album-2 {
+  display: none;
 }
