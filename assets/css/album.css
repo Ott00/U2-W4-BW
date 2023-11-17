@@ -26,6 +26,11 @@
   background:#9C2226
 } */
 
+#central-bar {
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
 @media screen and (min-width: 768px) {
   #central-bar {
     height: calc(100vh - 147px);
@@ -81,9 +86,4 @@
 
 .wrapper:hover .box2 {
   display: inline-block;
-}
-
-#central-bar {
-  max-height: calc(100vh - 147px);
-  overflow-y: auto;
 }
