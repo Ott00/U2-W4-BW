@@ -63,6 +63,8 @@ const trackList = async function (tracks) {
 
     console.log(audioCorrente);
 
+    let valoreAttuale = 0;
+
     playBtn.addEventListener("click", function () {
       // Se c'è un audio corrente, interrompi la riproduzione
 
@@ -72,9 +74,10 @@ const trackList = async function (tracks) {
         // Se il link del nuovo audio è diverso dall'audio corrente, avvia la nuova traccia
         if (audioCorrente.src !== trackPreviewLink) {
           audioCorrente.src = null;
+
           console.log(audioCorrente.src);
           audioCorrente = new Audio(trackPreviewLink);
-          aggiornaInputRange();
+
           playBarItems(track);
           audioCorrente.play();
         } else {
@@ -84,7 +87,7 @@ const trackList = async function (tracks) {
       } else {
         // Se non c'è un audio corrente, avvia la riproduzione del nuovo audio
         audioCorrente = new Audio(trackPreviewLink);
-        aggiornaInputRange();
+
         playBarItems(track);
         audioCorrente.play();
         console.log(audioCorrente);
@@ -94,22 +97,16 @@ const trackList = async function (tracks) {
   });
 
   //FUNZIONI CHE PER IL CAMBIO DEL TEMPO DELLA CANZONE (VA MALE)
+  let formRange = document.getElementById("form-range");
 
-  function aggiornaInputRange() {
-    if (audioCorrente) {
-      var progress = (audioCorrente.currentTime / audioCorrente.duration) * 100;
-      formRange.value = progress;
-    } else {
-      formRange.value = 0;
+  function avviaRiproduzione(valoreAttuale) {
+    if (valoreAttuale <= 30) {
+      formRange.value = valoreAttuale;
+      setTimeout(function () {
+        avviaRiproduzione(valoreAttuale + 1);
+      }, 1000);
     }
   }
-
-  const formRange = document.getElementById("form-range");
-
-  formRange.addEventListener("input", function () {
-    var nuovoTempo = (formRange.value / 100) * audioCorrente.duration;
-    audioCorrente.currentTime = nuovoTempo;
-  });
 };
 
 const playBarSongTitle = document.getElementById("playbar-song-title");
