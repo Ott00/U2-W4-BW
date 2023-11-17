@@ -287,8 +287,10 @@ ul {
   background-color: #252525;
 }
 
-#central-bar {
-  height: calc(100vh - 147px);
+@media screen and(min-width: 576px) {
+  #central-bar {
+    height: calc(100vh - 147px);
+  }
 }
 
 #playlist-bar {
