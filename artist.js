@@ -49,7 +49,7 @@ const artistPageSongsList = async function (numberoOfElement = 5) {
 
     const listElem = document.createElement("li");
     listElem.innerHTML = `
-    <li class="row mb-1 py-2">
+    <div class="row mb-1 py-2">
       <div class="col-1">
         ${i + 1}
         </div>
@@ -73,7 +73,7 @@ const artistPageSongsList = async function (numberoOfElement = 5) {
       <div class="col-2 text-end align-self-center">${(
         element.duration / 60
       ).toFixed(2)}</div>
-    </li>
+    </div>
     `;
 
     list.appendChild(listElem);

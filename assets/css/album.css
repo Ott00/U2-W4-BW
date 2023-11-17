@@ -64,7 +64,7 @@
 }
 
 .box1 {
-  display: block;
+  display: inline-block;
 }
 
 .box2 {
@@ -72,7 +72,6 @@
 }
 
 .wrapper {
-  width: auto;
   display: inline-block;
 }
 
@@ -81,5 +80,5 @@
 }
 
 .wrapper:hover .box2 {
-  display: block;
+  display: inline-block;
 }

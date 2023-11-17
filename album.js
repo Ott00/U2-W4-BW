@@ -18,14 +18,14 @@ const trackList = async function (tracks) {
     trackListElement.classList = "row mb-3";
 
     trackListElement.innerHTML = `     
-    <div class="wrapper col-1 text-start pe-0 align-self-center" role="button">
-        <span class="box1">${counter++}</span>
+    <div class="wrapper col-1 text-start">
+        <span class="box1 text-center">${counter++}</span>
         <span class="box2">
-        <span class="d-none">${track.preview}</span>
-        <button type="button" class=" btn text-start">
+          <span class="d-none">${track.preview}</span>
+          <button type="button" class=" btn text-start">
                  <div
                    class="icon-player-container d-flex justify-content-center align-items-center text-dark"
-                   style="width: 25px; height: 25px"
+                   style="width: 20px; height: 25px"
                  >
                    <svg
                      data-encore-id="icon"
@@ -40,21 +40,19 @@ const trackList = async function (tracks) {
                      ></path>
                    </svg>
                  </div>
-               </button>
+          </button>
         </span>
     </div>
-    <div class="col-4 text-start px-0 ps-2 align-self-center">
-    <div class="d-flex flex-column justify-content-center">
-     <span>${track.title}</span>
-     <span class="fs-8">${track.artist.name}</span>
-    </div>
-    </div>
-    <div class="col-4 text-end px-0 align-self-center">
-     ${track.rank}
+    <div class="col-8 text-start px-0 ps-2 align-self-center">
+      <div class="d-flex flex-column justify-content-center">
+        <span>${track.title}</span>
+        <span class="fs-8">${track.artist.name}</span>
+      </div>
     </div>
     <div class="col-3 text-end px-1 align-self-center">
      ${convertSecondsToMinutesTracks(track.duration)}
-    </div>`;
+    </div>
+    `;
 
     const playBtnContent = trackListElement.getElementsByTagName("span")[0];
     const playBtn = trackListElement.getElementsByTagName("span")[1];
