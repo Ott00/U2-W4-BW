@@ -252,9 +252,33 @@ ul {
 }
 
 .browse-card {
-  width: 12.5%;
+  width: 40%;
   aspect-ratio: 1/1;
   overflow: hidden;
+}
+
+@media screen and (min-width: 576px) {
+  .browse-card {
+    width: 30%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .browse-card {
+    width: 20%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .browse-card {
+    width: 12.5%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+  }
 }
 
 .rotate-image {
