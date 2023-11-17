@@ -255,7 +255,6 @@ ul {
   width: 12.5%;
   aspect-ratio: 1/1;
   overflow: hidden;
-
 }
 
 .rotate-image {
@@ -271,4 +270,8 @@ ul {
   top: 5px;
   left: 10px;
   z-index: 3;
+}
+
+#main-cover {
+  box-shadow: 0 0 20px 0 black;
 }

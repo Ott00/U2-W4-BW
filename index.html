@@ -376,9 +376,10 @@
               <div id="central-bar" class="px-sm-4">
                 <div id="hero" class="row d-none d-xl-block">
                   <div id="hero-card" class="shadow p-2 rounded">
-                    <div class="row py-3">
+                    <div class="row py-3 rounded-3">
                       <div class="col-3">
                         <img
+                          id="main-cover"
                           src="./assets/imgs/main/image-11.jpg"
                           class="img-fluid d-block p-2"
                           alt="..."
@@ -426,7 +427,7 @@
                 <div
                   class="mb-3 mb-md-0 d-flex justify-content-between align-items-center px-3 px-sm-0"
                 >
-                  <h2 class="my-3">Buonasera</h2>
+                  <h2 id="time-greeting" class="my-3">Buonasera</h2>
                   <button class="btn d-md-none p-0">
                     <i class="bi bi-gear fs-2"></i>
                   </button>
@@ -573,10 +574,10 @@
                 </div>
 
                 <div class="row text my-3 space-between">
-                  <h2 class="col-6 text-start fs-3 d-none d-md-flex">
+                  <h2 class="col-6 text-start fs-3 d-none d-md-block">
                     Altro di ciò che ti piace
                   </h2>
-                  <h3 class="col-6 text-end fs-5 d-none d-md-flex">
+                  <h3 class="col-6 text-end fs-5 d-none d-md-block">
                     Visualizza di più
                   </h3>
                 </div>
@@ -1218,6 +1219,9 @@
         </div>
       </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+    <script src="./color.js"></script>
+    <script src="./index.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
