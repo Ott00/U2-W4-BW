@@ -96,8 +96,8 @@ const artistPage = async function () {
       method: "GET",
       headers: {
         "X-RapidAPI-Key": "6969464db2msh57ee0909918148fp1b3cafjsn9608ba4cbef4",
-        "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
-      },
+        "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com"
+      }
     });
 
     const artist = await response.json();

@@ -187,7 +187,7 @@ const albumPage = async function () {
       console.log(colorStr);
       const rgbValue = colorStr.replaceAll("[", "(").replaceAll("]", ")");
       console.log(rgbValue);
-      const changeBg = document.getElementById("central-bar-container");
+      const changeBg = document.getElementById("album-banner");
       changeBg.style.backgroundColor = "rgb" + rgbValue;
     });
   } catch (error) {
