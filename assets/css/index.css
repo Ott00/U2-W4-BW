@@ -276,8 +276,24 @@ ul {
   background-color: #181818;
 }
 
+.bg-dark-2-hover {
+  background-color: unset;
+  transition: background-color 0.3s;
+}
+
+.bg-dark-2-hover:hover {
+  background-color: #252525;
+  border-radius: 10px;
+}
+
 .pointer {
   cursor: pointer;
+  opacity: 0.9;
+  transition: all 0.3s;
+}
+
+.pointer:hover {
+  opacity: 1;
 }
 
 .card {

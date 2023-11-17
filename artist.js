@@ -8,18 +8,20 @@ const artistPageAlbumList = async function () {
 
   const artistiRepertoire = document.getElementById("artist-repertoire");
   const albumContainer = document.createElement("div");
-  albumContainer.classList = "d-flex flex-wrap gap-3 my-4";
+  albumContainer.classList =
+    "d-flex flex-wrap justify-content-center gap-3 my-4";
 
   artistAlbums.forEach((album) => {
     const albumItem = document.createElement("div");
-    albumItem.classList = "album-card bg-dark p-2 rounded h-100";
+    albumItem.classList =
+      "album-card p-3 rounded h-100 bg-dark-2 border-0 pointer";
     albumItem.innerHTML = `
       <img
          width="100%"
         class="img-fluid rounded"
         src="${album.cover_xl}"
         alt=""/>
-      <span class="d-block fs-6 mt-1 text-truncate fw-bold ">${album.title}</span>
+      <span class="d-block fs-6 py-1 pt-3 text-truncate fw-bold ">${album.title}</span>
       <p class="fs-7">Album</p>
     `;
 
@@ -49,7 +51,7 @@ const artistPageSongsList = async function (numberoOfElement = 5) {
 
     const listElem = document.createElement("li");
     listElem.innerHTML = `
-    <div class="row mb-1 py-2">
+    <div class="row mb-1 py-2 ">
       <div class="col-1">
         ${i + 1}
         </div>
