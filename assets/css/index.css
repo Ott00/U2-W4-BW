@@ -275,3 +275,30 @@ ul {
 #main-cover {
   box-shadow: 0 0 20px 0 black;
 }
+
+.bg-dark-2 {
+  background-color: #181818;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.card {
+  transition: background-color 0.3s;
+}
+.card:hover {
+  background-color: #252525;
+}
+
+#central-bar-container {
+  height: calc(100vh - 147px);
+}
+
+#playlist-bar {
+  height: calc(100vh - 259px);
+}
+
+#friend-container {
+  height: calc(100vh - 203px);
+}

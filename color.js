@@ -31,16 +31,4 @@ window.onload = () => {
       changeBg.style.backgroundColor = "rgb" + rgbValue;
     });
   }
-
-  if (mainCoverHome) {
-    const color = colorThief.getColor(mainCoverHome);
-    console.log(color);
-    const colorStr = JSON.stringify(color);
-    console.log(colorStr);
-    const rgbValue = colorStr.replaceAll("[", "(").replaceAll("]", "");
-    console.log(rgbValue);
-    const changeBg = mainCoverHome.closest(".row");
-    changeBg.style.backgroundColor = "rgb" + rgbValue + ", 1)";
-    console.log(changeBg);
-  }
 };
