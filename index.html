@@ -967,10 +967,15 @@
           </div>
         </div>
         <div class="col-3 d-flex pe-5 ps-0 d-none d-md-flex">
-          <img src="./assets/imgs/main/image-1.jpg" alt="" width="100px" />
+          <img
+            src="./assets/imgs/main/image-12.jpg"
+            alt=""
+            width="100px"
+            id="playbar-img"
+          />
           <div class="my-auto mx-4">
-            <h5 class="my-1">Casa</h5>
-            <p class="my-1">Neima Ezza</p>
+            <h5 class="my-1" id="playbar-song-title">Titolo Canzone</h5>
+            <p class="my-1" id="playbar-artist-name">Artista</p>
           </div>
           <div class="my-auto">
             <i class="fs-4 bi bi-heart"></i>
@@ -980,11 +985,11 @@
           class="col-6 d-flex flex-column justify-content-center flex-grow-1 px-5 d-none d-md-flex"
         >
           <div class="d-flex align-items-center justify-content-center">
-            <i class="fs-3 mx-2 bi bi-shuffle"></i>
-            <i class="fs-3 mx-2 bi bi-skip-backward-fill"></i>
-            <i class="fs-1 mx-2 bi bi-play-circle-fill"></i>
-            <i class="fs-3 mx-2 bi bi-skip-forward-fill"></i>
-            <i class="fs-3 mx-2 bi bi-arrow-repeat"></i>
+            <i class="fs-3 mx-2 bi bi-shuffle pointer"></i>
+            <i class="fs-3 mx-2 bi bi-skip-backward-fill pointer"></i>
+            <i class="fs-1 mx-2 bi bi-play-circle-fill pointer"></i>
+            <i class="fs-3 mx-2 bi bi-skip-forward-fill pointer"></i>
+            <i class="fs-3 mx-2 bi bi-arrow-repeat pointer"></i>
           </div>
           <div class="d-flex gap-2">
             <span>0:00</span>
@@ -993,14 +998,13 @@
           </div>
         </div>
         <div
-          class="col-3 d-flex justify-content-center align-items-center ps-5 pe-0 d-none d-md-flex"
+          class="col-3 d-flex justify-content-end align-items-center ps-5 pe-0 d-none d-md-flex"
         >
-          <i class="fs-5 px-2 bi bi-mic"></i>
-          <i class="fs-5 px-2 bi bi-view-list"></i>
-          <i class="fs-5 px-2 bi bi-speaker"></i>
-          <i class="fs-2 me-1 bi bi-volume-down"></i>
-          <input type="range" class="form-range" min="0" max="100" />
-          <i class="fs-5 px-2 bi bi-arrows-angle-expand"></i>
+          <i class="fs-5 px-2 bi bi-mic pointer"></i>
+          <i class="fs-5 px-2 bi bi-view-list pointer"></i>
+          <i class="fs-5 px-2 bi bi-speaker pointer"></i>
+          <i class="fs-2 me-1 bi bi-volume-down pointer"></i>
+          <i class="fs-5 px-2 bi bi-arrows-angle-expand pointer"></i>
         </div>
       </div>
     </div>

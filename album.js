@@ -25,7 +25,7 @@ const trackList = async function (tracks) {
           <button type="button" class=" btn text-start">
                  <div
                    class="icon-player-container d-flex justify-content-center align-items-center text-dark"
-                   style="width: 20px; height: 25px"
+                   style="width: 25px; height: 25px"
                  >
                    <svg
                      data-encore-id="icon"
