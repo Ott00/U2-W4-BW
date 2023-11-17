@@ -272,10 +272,6 @@ ul {
   z-index: 3;
 }
 
-#main-cover {
-  box-shadow: 0 0 20px 0 black;
-}
-
 .bg-dark-2 {
   background-color: #181818;
 }

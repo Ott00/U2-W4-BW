@@ -115,19 +115,4 @@ window.onload = () => {
   const greetingPlaceholder = document.getElementById("time-greeting");
   getCorrectGreeting(greetingPlaceholder);
   loadInterestCards();
-
-  const colorThief = new ColorThief();
-  const mainCoverHome = document.getElementById("main-cover");
-  //   console.log(mainCoverHome);
-  if (mainCoverHome) {
-    const color = colorThief.getColor(mainCoverHome);
-    // console.log(color);
-    const colorStr = JSON.stringify(color);
-    // console.log(colorStr);
-    const rgbValue = colorStr.replaceAll("[", "(").replaceAll("]", ")");
-    // console.log(rgbValue);
-    const changeBg = mainCoverHome.closest(".row");
-    changeBg.style.backgroundColor = "rgb" + rgbValue;
-    // console.log(changeBg);
-  }
 };
