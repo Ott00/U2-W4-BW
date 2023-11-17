@@ -92,9 +92,11 @@ const loadInterestCards = () => {
   const randomizedPlaylists = shuffle(playlists);
 
   randomizedPlaylists.forEach((playlist) => {
+    const cardCol = document.createElement("div");
+    cardCol.classList = "col-6 col-md-2";
     const card = document.createElement("div");
-    card.classList = "card p-3 shadow mb-3 bg-dark-2 border-0 pointer";
-    card.style = "width: calc(20% - 1rem)";
+    card.classList = "w-100 card p-3 shadow mb-3 bg-dark-2 border-0 pointer";
+    // card.style = "width: calc(20% - 1rem)";
     card.innerHTML = `
     <img
       src="${playlist.img}"
@@ -107,7 +109,8 @@ const loadInterestCards = () => {
     </div>
     `;
 
-    cardContainer.appendChild(card);
+    cardCol.appendChild(card);
+    cardContainer.appendChild(cardCol);
   });
 };
 
