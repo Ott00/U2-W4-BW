@@ -126,8 +126,8 @@ const albumPage = async function () {
       method: "GET",
       headers: {
         "X-RapidAPI-Key": "6969464db2msh57ee0909918148fp1b3cafjsn9608ba4cbef4",
-        "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com",
-      },
+        "X-RapidAPI-Host": "deezerdevs-deezer.p.rapidapi.com"
+      }
     });
 
     const album = await response.json();
@@ -157,6 +157,7 @@ const albumPage = async function () {
     const playBarImg = document.getElementById("playbar-img");
 
     albumCover.src = album.cover_xl;
+    albumCover.crossOrigin = "Anonymous";
     albumTitle.innerText = album.title;
     albumTitleOnStickyBar.innerText = album.title;
     albumArtistProfileImg.src = album.artist.picture_small;
@@ -170,6 +171,25 @@ const albumPage = async function () {
     console.log(album.tracks);
 
     trackList(album.tracks.data);
+
+    const colorThief = new ColorThief();
+    // const img = document.getElementById("album-cover");
+    // console.log(img)
+    // // const tiltedImg = document.getElementsByClassName("rotate-image");
+    // console.log(tiltedImg)
+    // console.log(img)
+
+    albumCover.addEventListener("load", () => {
+      console.log(albumCover);
+      const color = colorThief.getColor(albumCover);
+      console.log(color);
+      const colorStr = JSON.stringify(color);
+      console.log(colorStr);
+      const rgbValue = colorStr.replaceAll("[", "(").replaceAll("]", ")");
+      console.log(rgbValue);
+      const changeBg = document.getElementById("central-bar-container");
+      changeBg.style.backgroundColor = "rgb" + rgbValue;
+    });
   } catch (error) {
     console.log("errore nella ricerca dell'album", error);
   }
@@ -182,34 +202,34 @@ const playBarItems = (track) => {
 
 window.onload = () => {
   albumPage();
-
-  // const containerTitle = document.getElementById("container-title");
-  // const albumTitleOnStickyBar = document.getElementById("name-album-2");
-
-  // window.addEventListener("scroll", function () {
-  //   let containerTop = containerTitle.getBoundingClientRect().top;
-
-  //   if (containerTop <= 0) {
-  //     // La parte superiore del contenitore è al top o sopra la viewport
-  //     albumTitleOnStickyBar.style.display = "block";
-  //   } else {
-  //     // La parte superiore del contenitore è sotto la viewport
-  //     albumTitleOnStickyBar.style.display = "none";
-  //   }
-  // });
-
-  // containerTitle.addEventListener("scroll", function (e) {
-  //   console.log(e);
-  //   const scrollPosition = containerTitle.scrollY;
-
-  //   const navbar = document.querySelector("nav");
-  //   const navBtn = document.getElementById("nav-button");
-  //   if (scrollPosition >= 350) {
-  //     navbar.className = "scrollNav";
-  //     navBtn.className = "scrollNavBtn";
-  //   } else {
-  //     navbar.className = "scrollNavBack";
-  //     navBtn.className = "scrollNavBtnBack";
-  //   }
-  // });
 };
+
+// const containerTitle = document.getElementById("container-title");
+// const albumTitleOnStickyBar = document.getElementById("name-album-2");
+
+// window.addEventListener("scroll", function () {
+//   let containerTop = containerTitle.getBoundingClientRect().top;
+
+//   if (containerTop <= 0) {
+//     // La parte superiore del contenitore è al top o sopra la viewport
+//     albumTitleOnStickyBar.style.display = "block";
+//   } else {
+//     // La parte superiore del contenitore è sotto la viewport
+//     albumTitleOnStickyBar.style.display = "none";
+//   }
+// });
+
+// containerTitle.addEventListener("scroll", function (e) {
+//   console.log(e);
+//   const scrollPosition = containerTitle.scrollY;
+
+//   const navbar = document.querySelector("nav");
+//   const navBtn = document.getElementById("nav-button");
+//   if (scrollPosition >= 350) {
+//     navbar.className = "scrollNav";
+//     navBtn.className = "scrollNavBtn";
+//   } else {
+//     navbar.className = "scrollNavBack";
+//     navBtn.className = "scrollNavBtnBack";
+//   }
+// });
