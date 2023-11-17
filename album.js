@@ -18,7 +18,7 @@ const trackList = async function (tracks) {
     trackListElement.classList = "row mb-3";
 
     trackListElement.innerHTML = `     
-    <div class="wrapper col-1 text-start">
+    <div class="wrapper ps-0  col-1 text-center">
         <span class="box1 text-center">${counter++}</span>
         <span class="box2">
           <span class="d-none">${track.preview}</span>
