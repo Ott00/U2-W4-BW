@@ -120,9 +120,8 @@ const searchArtist = async function () {
           <div class="ms-1 ms-md-5 d-flex flex-column gap-1 w-100">
             <h5 class="m-0 text-truncate">${element.title}</h5>
             <div class="d-flex">
-              <span class="badge bg-secondary h-100 me-1">${
-                element.explicit_lyrics ? "E" : ""
-              }</span>
+              <span class="badge bg-secondary h-100 me-1">${element.explicit_lyrics ? "E" : ""
+        }</span>
               <p class="m-0 align-self-center">${element.artist.name}</p>
             </div>
           </div>
@@ -173,3 +172,8 @@ searchForm.addEventListener("submit", function (event) {
     history.forward();
   });
 });
+
+const delBadge = () => {
+  const delBtn = document.getElementsByClassName("card-badge");
+  delBtn.onclick(rem)
+}
