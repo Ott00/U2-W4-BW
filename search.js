@@ -59,7 +59,7 @@ const searchArtist = async function () {
         col.classList = "col-12 col-lg-6";
 
         const artistCard = document.createElement("div");
-        artistCard.classList = "card border-0 bg-spotify p-3";
+        artistCard.classList = "card border-0 bg-spotify p-3 bg-dark-2 pointer";
 
         artistCard.addEventListener("click", function () {
           window.location.assign("./artist.html?artistId=" + artistId);
@@ -108,7 +108,7 @@ const searchArtist = async function () {
     responseObj.data.forEach((element) => {
       const listElem = document.createElement("li");
       listElem.innerHTML = `
-      <li class="row mb-3 border-bottom py-2">
+      <li class="row mb-3 border-bottom py-2 pointer">
         <div class="col-2 col-md-1">
           <img
             width="60px"
@@ -120,8 +120,9 @@ const searchArtist = async function () {
           <div class="ms-1 ms-md-5 d-flex flex-column gap-1 w-100">
             <h5 class="m-0 text-truncate">${element.title}</h5>
             <div class="d-flex">
-              <span class="badge bg-secondary h-100 me-1">${element.explicit_lyrics ? "E" : ""
-        }</span>
+              <span class="badge bg-secondary h-100 me-1">${
+                element.explicit_lyrics ? "E" : ""
+              }</span>
               <p class="m-0 align-self-center">${element.artist.name}</p>
             </div>
           </div>
@@ -172,4 +173,3 @@ searchForm.addEventListener("submit", function (event) {
     history.forward();
   });
 });
-
