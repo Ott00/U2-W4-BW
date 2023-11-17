@@ -64,7 +64,7 @@ const artistPageSongsList = async function (numberoOfElement = 5) {
         </div>
         <div class="col-8 d-flex align-items-center">
         <div class="d-flex flex-column gap-1 w-100">
-          <h5 class="m-0 text-truncate fs-6">${element.title}</h5>
+          <h5 class="m-0 ps-4 ps-md-0 text-truncate fs-6">${element.title}</h5>
           <div class="d-flex">
             <span class="badge bg-secondary h-100 me-1 fs-9">${
               element.explicit_lyrics ? "E" : ""

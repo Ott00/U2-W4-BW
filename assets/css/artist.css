@@ -45,5 +45,18 @@
 }
 
 .album-card {
-  width: 15%;
+  width: 48%;
+}
+
+#artist-repertoire {
+  margin-bottom: 220px;
+}
+
+@media screen and (min-width: 768px) {
+  .album-card {
+    width: 15%;
+  }
+  #artist-repertoire {
+    margin-bottom: 0px;
+  }
 }
