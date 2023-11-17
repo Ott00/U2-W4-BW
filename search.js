@@ -52,14 +52,15 @@ const searchArtist = async function () {
         titleSong.innerText = "Brani";
 
         const titleArtist = document.createElement("h2");
-        titleArtist.classList = "col-12 col-lg-6 mb-3";
+        titleArtist.classList = "col-12 col-lg-6 mb-3 px-4 px-md-0";
         titleArtist.innerText = "Risultato più rilevante";
 
         const col = document.createElement("div");
-        col.classList = "col-12 col-lg-6";
+        col.classList = "col-12 col-lg-6 px-4 px-md-0";
 
         const artistCard = document.createElement("div");
-        artistCard.classList = "card border-0 bg-spotify p-3 bg-dark-2 pointer";
+        artistCard.classList =
+          "card border-0 bg-spotify p-3 bg-dark-2 pointer ";
 
         artistCard.addEventListener("click", function () {
           window.location.assign("./artist.html?artistId=" + artistId);
@@ -101,7 +102,7 @@ const searchArtist = async function () {
     col.classList = "col-12 col-lg-6";
 
     const list = document.createElement("ul");
-    list.classList = "m-0 p-0 mt-3 mt-lg-0 px-3 px-lg-1";
+    list.classList = "m-0 p-0 mt-3 mt-lg-0 px-4 px-md-1 ";
     list.setAttribute("id", "list-songs");
 
     //Troviamo le sue canzoni più popolari
