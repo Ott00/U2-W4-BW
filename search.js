@@ -173,7 +173,3 @@ searchForm.addEventListener("submit", function (event) {
   });
 });
 
-const delBadge = () => {
-  const delBtn = document.getElementsByClassName("card-badge");
-  delBtn.onclick(rem)
-}
